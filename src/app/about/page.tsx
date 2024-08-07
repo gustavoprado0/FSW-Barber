@@ -1,5 +1,9 @@
+import { Button } from "../_components/ui/button";
+
 const About = () => {
-  return ( <h1>about page</h1> );
+  return ( 
+    <Button>teste</Button>
+   );
 }
  
 export default About;
