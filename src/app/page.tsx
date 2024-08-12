@@ -8,7 +8,7 @@ import Header from "./_components/ui/header"
 import { Search } from "lucide-react"
 import { quickSearchOptions } from "./constants/search"
 import { Input } from "./_components/ui/input"
-import { CardContent } from "./_components/ui/card"
+import { Card, CardContent } from "./_components/ui/card"
 
 const Home = async () => {
   const barbershops = await db.barbershop.findMany({})
@@ -91,14 +91,6 @@ const Home = async () => {
           ))}
         </div>
       </div>
-      <ul className="w-full border border-gray-700"></ul>
-      <footer className="mt-5">
-        <CardContent>
-          <p className="text-sm text-gray-400">
-           © 2023 Copyright <span className="font-bold">FSW Barber</span>
-          </p>
-        </CardContent>
-      </footer>
     </div>
   )
 }
