@@ -8,6 +8,7 @@ import Header from "./_components/ui/header"
 import { Search } from "lucide-react"
 import { quickSearchOptions } from "./constants/search"
 import { Input } from "./_components/ui/input"
+import { CardContent } from "./_components/ui/card"
 
 const Home = async () => {
   const barbershops = await db.barbershop.findMany({})
@@ -29,8 +30,12 @@ const Home = async () => {
         {/* BUSCA */}
         <div className="mt-6 flex items-center gap-2">
           <Input />
-          <Search />
+          <div className="bg-purple-400 p-2 rounded-[6px] cursor-pointer">
+            <Search />
+          </div>
         </div>
+
+        
 
 
         {/* BUSCA RÁPIDA */}
@@ -86,6 +91,14 @@ const Home = async () => {
           ))}
         </div>
       </div>
+      <ul className="w-full border border-gray-700"></ul>
+      <footer className="mt-5">
+        <CardContent>
+          <p className="text-sm text-gray-400">
+           © 2023 Copyright <span className="font-bold">FSW Barber</span>
+          </p>
+        </CardContent>
+      </footer>
     </div>
   )
 }
