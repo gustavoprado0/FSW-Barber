@@ -19,7 +19,7 @@ const Home = async () => {
 
   return (
     <div>
-      {/* header */}
+      {/* HEADER */}
       <Header />
       <div className="p-5">
         {/* TEXTO */}
@@ -29,7 +29,7 @@ const Home = async () => {
         {/* BUSCA */}
         <div className="mt-6 flex items-center gap-2">
           <Input />
-          <div className="bg-purple-400 p-2 rounded-[6px] cursor-pointer">
+          <div className="bg-[#8162FF] p-2 rounded-[6px] cursor-pointer">
             <Search />
           </div>
         </div>
