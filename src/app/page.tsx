@@ -4,11 +4,10 @@ import { db } from "./_lib/prisma"
 import BarbershopItem from "./_components/barbershop-item"
 import BookingItem from "./_components/booking-item"
 import Link from "next/link"
-import Header from "./_components/ui/header"
 import { Search } from "lucide-react"
 import { quickSearchOptions } from "./constants/search"
 import { Input } from "./_components/ui/input"
-import { Card, CardContent } from "./_components/ui/card"
+import Header from "./_components/header"
 
 const Home = async () => {
   const barbershops = await db.barbershop.findMany({})
@@ -34,9 +33,6 @@ const Home = async () => {
             <Search />
           </div>
         </div>
-
-        
-
 
         {/* BUSCA RÁPIDA */}
         <div className="mt-6 flex gap-3 overflow-x-scroll [&::-webkit-scrollbar]:hidden">
